@@ -18,7 +18,7 @@ def gradient_accumulation(w_init: torch.Tensor, micro_batches: list, lr: float, 
 
             with torch.no_grad():
 
-                MLS = w.grad.clone() / count
+                MLS = w.grad / count
                 w -= lr * MLS
 
             count = 0
