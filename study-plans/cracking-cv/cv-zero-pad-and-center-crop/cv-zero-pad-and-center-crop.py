@@ -1,8 +1,8 @@
 def pad_image(image: list, pad:int)-> list:
     pad_h = [0.0]*len(image[0])
     for i in range(pad):
-        image.append(pad_h)
-        image.insert(0, pad_h)
+        image.append(pad_h.copy())
+        image.insert(0, pad_h.copy())
 
     for i in range(len(image)):
         for p in range(pad):
